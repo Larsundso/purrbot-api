@@ -25,10 +25,8 @@ PurrBot.sfw.categories.senko(); // returns Promise<string>
 // NSFW Categories have the same Syntax
 ```
 
-```
-
-
 #### Options
+
 ```
 
 imgType: eithert `img` or `gif`
@@ -51,4 +49,7 @@ I will happily accept your Pull-Request if it:
 
 - looks reasonable
 - does not break backwards compatibility
+
+```
+
 ```
