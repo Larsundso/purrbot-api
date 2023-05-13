@@ -28,7 +28,7 @@ PurrBot.sfw.categories.senko(); // returns Promise<string>
 #### Options
 
 ```
-imgType: eithert `img` or `gif`
+imgType: either `img` or `gif`
 nsfw: boolean
 category: string
 ```
