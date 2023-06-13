@@ -38,7 +38,8 @@ export type NSFWCategories = {
   | 'threesome_ffm'
   | 'threesome_mmf'
   | 'yaoi'
-  | 'yuri';
+  | 'yuri'
+  | 'solo_male';
 };
 
 export const baseURL = 'https://purrbot.site/api';
@@ -567,6 +568,14 @@ const nsfw = {
    * // => https://purrbot.site/img/xxx.jpg
    */
   yuri: (): Promise<string> => get('gif', true, 'yuri'),
+  /**
+   * @returns {Promise<string>}
+   * @example
+   * import PurrBot from 'purrbot-api';
+   * PurrBot.nsfw.categories.solo_male().then(console.log);
+   * // => https://purrbot.site/img/xxx.jpg
+   */
+  solo_male: (): Promise<string> => get('gif', true, 'solo_male'),
  },
 };
 
