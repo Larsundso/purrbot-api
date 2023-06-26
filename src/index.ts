@@ -1,17 +1,7 @@
 import fetch from 'node-fetch';
 
 export type SFWCategories = {
- img:
-  | 'background'
-  | 'eevee'
-  | 'holo'
-  | 'icon'
-  | 'kitsune'
-  | 'neko'
-  | 'okami'
-  | 'senko'
-  | 'shiro'
-  | 'lay';
+ img: 'background' | 'eevee' | 'holo' | 'icon' | 'kitsune' | 'neko' | 'okami' | 'senko' | 'shiro';
  gif:
   | 'bite'
   | 'blush'
@@ -31,7 +21,8 @@ export type SFWCategories = {
   | 'smile'
   | 'tail'
   | 'kitsune'
-  | 'tickle';
+  | 'tickle'
+  | 'lay';
 };
 
 export type NSFWCategories = {
@@ -288,14 +279,6 @@ const sfw = {
    * @returns {Promise<string>}
    * @example
    * import PurrBot from 'purrbot-api';
-   * PurrBot.sfw.categories.lay().then(console.log);
-   * // => https://purrbot.site/img/xxx.jpg
-   */
-  lay: (): Promise<string> => get('img', false, 'lay'),
-  /**
-   * @returns {Promise<string>}
-   * @example
-   * import PurrBot from 'purrbot-api';
    * PurrBot.sfw.categories.bite().then(console.log);
    * // => https://purrbot.site/img/xxx.jpg
    */
@@ -420,6 +403,14 @@ const sfw = {
    * // => https://purrbot.site/img/xxx.jpg
    */
   tickle: (): Promise<string> => get('gif', false, 'tickle'),
+  /**
+   * @returns {Promise<string>}
+   * @example
+   * import PurrBot from 'purrbot-api';
+   * PurrBot.sfw.categories.lay().then(console.log);
+   * // => https://purrbot.site/img/xxx.jpg
+   */
+  lay: (): Promise<string> => get('gif', false, 'lay'),
  },
 };
 
