@@ -23,14 +23,22 @@ PurrBot.sfw.categories.neko('gif'); // returns Promise<string>
 PurrBot.sfw.categories.senko(); // returns Promise<string>
 
 // NSFW Categories have the same Syntax
+
+PurrBot.owoify("Hello World!"); // returns Promise<string>
 ```
 
 #### Options
 
+NSFW / SFW Categories:
 ```
 imgType: either `img` or `gif`
 nsfw: boolean
 category: string
+```
+
+Owoify:
+```
+text: string
 ```
 
 <br>
