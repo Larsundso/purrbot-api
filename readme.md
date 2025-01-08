@@ -1,9 +1,10 @@
 # Purrbot.site API Wrapper
 
-An up-to-date unofficial Wrapper for the [purrbot.site](https://purrbot.site/) API
-100% API Coverage
-100% TypeScript Coverage
-100% JSDoc Coverage
+The [official](https://discord.com/channels/423771795523371019/544511526908854272/1322284870889635892)™️ Wrapper for the [purrbot.site](https://purrbot.site/) API
+<br /><br />
+100% API Coverage<br />
+100% TypeScript Coverage<br />
+100% JSDoc Coverage<br />
 
 ## Getting started
 
