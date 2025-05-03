@@ -1,6 +1,6 @@
-import { Categories, GetAPIResponse, ListAPIResponse } from 'types';
+import { Categories, GetAPIResponse, ListAPIResponse } from './types.js';
 
-export const baseURL = 'https://purrbot.site/api';
+export const baseURL = 'https://api.purrbot.site/v2';
 
 /**
  * @param imgType {string} `gif` or `img`
