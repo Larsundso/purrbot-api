@@ -1,5 +1,5 @@
-import { NSFWCategories } from 'types.js';
-import { get, list } from 'util.js';
+import { NSFWCategories } from './types.js';
+import { get, list } from './util.js';
 
 export default {
  /**

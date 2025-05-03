@@ -1,5 +1,5 @@
-import { OwoifyAPIResponse } from 'types';
-import { baseURL } from 'util';
+import { OwoifyAPIResponse } from './types.js';
+import { baseURL } from './util.js';
 
 /**
  * @param text {string} text to owoify

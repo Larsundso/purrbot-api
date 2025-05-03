@@ -1,4 +1,12 @@
 {
+ "overrides": [
+  {
+   "files": ["tests/**/*"],
+   "env": {
+    "jest": true
+   }
+  }
+ ],
  "settings": {
   "import/parsers": {
    "@typescript-eslint/parser": [".ts"]
