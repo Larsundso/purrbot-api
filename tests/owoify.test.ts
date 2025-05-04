@@ -26,6 +26,61 @@ describe('owoify.ts', () => {
   expect(result2).not.toBe('Testing multiple owoifications to ensure API stability');
  });
 
+ test('owoify() with emoticons option should add emoticons', async () => {
+  const input = 'Hello world!';
+  const result = await owoify(input, { emoticons: true });
+
+  expect(typeof result).toBe('string');
+  expect(result).not.toBe(input);
+  const containsEmoticon = !result.includes('!');
+  expect(containsEmoticon).toBe(true);
+ });
+
+ test('owoify() with replaceWords option should replace common words', async () => {
+  const input = 'I love you so much!';
+  const result = await owoify(input, { replaceWords: true });
+
+  expect(typeof result).toBe('string');
+  expect(result).not.toBe(input);
+  // Look for common owoified word replacements
+  // Words like "love" might become "wuv"
+  const hasReplacedWords =
+   result !== input && (result.includes('wuv') || /\b(w[ou]v)\b/g.test(result));
+  expect(hasReplacedWords).toBe(true);
+ });
+
+ test('owoify() with stutter option should add stuttering', async () => {
+  const input = 'Hello World';
+  const result = await owoify(input, { stutter: true });
+
+  expect(typeof result).toBe('string');
+  expect(result).not.toBe(input);
+  // Stuttering typically adds hyphens to create w-word patterns
+  const containsStuttering = /-[a-zA-Z]/g.test(result);
+  expect(containsStuttering).toBe(true);
+ });
+
+ test('owoify() should handle multiple options combined', async () => {
+  const input = 'Hello, I love this world!';
+  const result = await owoify(input, {
+   emoticons: true,
+   replaceWords: true,
+   stutter: true,
+  });
+
+  expect(typeof result).toBe('string');
+  expect(result).not.toBe(input);
+  // Check for the presence of features from each option
+  const containsEmoticon = !result.includes('!');
+  const hasReplacedWords =
+   result !== input && (result.includes('wuv') || /\b(w[ou]v)\b/g.test(result));
+
+  // At least some of these features should be present
+  // Suttering is added randomly, so we can't test for it
+  expect(hasReplacedWords).toBe(true);
+  expect(containsEmoticon).toBe(true);
+ });
+
  test('owoify() should handle empty string', async () => {
   try {
    const result = await owoify('');
