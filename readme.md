@@ -5,6 +5,7 @@ The [official](https://discord.com/channels/423771795523371019/54451152690885427
 100% API Coverage<br />
 100% TypeScript Coverage<br />
 100% JSDoc Coverage<br />
+100% Test Coverage<br />
 
 ## Getting started
 
@@ -26,6 +27,8 @@ PurrBot.sfw.categories.senko(); // returns Promise<string>
 // NSFW Categories have the same Syntax
 
 PurrBot.owoify("Hello World!"); // returns Promise<string>
+PurrBot.owoify("Hello World!", { emoticons: true }); // returns Promise<string>
+PurrBot.owoify("Hello World!", { replaceWords: true, stutter: true }); // returns Promise<string>
 ```
 
 #### Options
@@ -40,6 +43,9 @@ category: string
 Owoify:
 ```
 text: string
+sutter?: boolean
+replaceWords?: boolean
+emoticons?: boolean
 ```
 
 <br>
